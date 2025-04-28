@@ -4,3 +4,6 @@ resource "aws_vpc" "myvpc" {
     Name = "myvpc"
   }
 }
+provider "aws" {
+   region = "us-east-1"
+}

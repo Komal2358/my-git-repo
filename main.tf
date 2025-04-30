@@ -8,19 +8,21 @@ provider "aws" {
    region = "us-east-1"
 }
 
-resource "aws_subnet" "mysubnet"{
+resource "aws_subnet" "mypublicsubnet"{
    vpc_id = "aws_vpc.myvpc.id"
    cidr_block = "10.10.0.0/24"
 
    tags = {
-     Name = "mysubnet"
+     Name = "mypublicsubnet"
      }
 }
 
-resource "aws_subnet" "mysubnet2" {
+resource "aws_subnet" "myprivatesubnet" {
    vpc_id = "aws_vpc.myvpc.id"
    cidr_block = "10.10.1.0/24"
    tags = {
-   Name = "mysubnet2"
+   Name = "myprivatesubnet"
    }
 }
+
+

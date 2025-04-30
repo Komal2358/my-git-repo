@@ -9,10 +9,18 @@ provider "aws" {
 }
 
 resource "aws_subnet" "mysubnet"{
-   vpc_id = "aws_vpc.myvpc.id
+   vpc_id = "aws_vpc.myvpc.id"
    cidr_block = "10.10.0.0/24"
 
    tags = {
      Name = "mysubnet"
      }
+}
+
+resource "aws_subnet" "mysubnet2" {
+   vpc_id = "aws_vpc.myvpc.id"
+   cidr_block = "10.10.1.0/24"
+   tags = {
+   Name = "mysubnet2"
+   }
 }
